@@ -1,0 +1,71 @@
+name: mailq
+
+x-app: &app
+  build: .
+  restart: unless-stopped
+  environment: &env
+    DATABASE_URL: postgres://mail:mail@postgres:5432/mail
+    AMQP_URL: amqp://mail:mail@rabbitmq:5672
+    SMTP_HOST: mailpit
+    SMTP_PORT: "1025"
+    RATE_TRANSACTIONAL: ${RATE_TRANSACTIONAL:-200}
+    RATE_BULK: ${RATE_BULK:-100}
+    ADMIN_TOKEN: ${ADMIN_TOKEN:-dev-admin-token}
+  depends_on:
+    postgres: { condition: service_healthy }
+    rabbitmq: { condition: service_healthy }
+    mailpit: { condition: service_started }
+
+services:
+  api:
+    <<: *app
+    ports: ["3000:3000"]
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/readyz"]
+      interval: 3s
+      retries: 20
+
+  worker:
+    <<: *app
+    command: ["node", "dist/worker.js"]
+    environment:
+      <<: *env
+      PORT: "9100"
+    deploy:
+      replicas: 2
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:9100/healthz"]
+      interval: 3s
+      retries: 20
+
+  postgres:
+    image: postgres:17-alpine
+    environment: { POSTGRES_USER: mail, POSTGRES_PASSWORD: mail, POSTGRES_DB: mail }
+    ports: ["5433:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mail"]
+      interval: 2s
+      retries: 30
+
+  rabbitmq:
+    image: rabbitmq:4.1-management-alpine
+    environment: { RABBITMQ_DEFAULT_USER: mail, RABBITMQ_DEFAULT_PASS: mail }
+    ports: ["5674:5672", "15672:15672"]
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "check_port_connectivity"]
+      interval: 5s
+      retries: 30
+
+  # SMTP sink with a web UI on :8025. Chaos mode lets tests inject SMTP errors.
+  mailpit:
+    image: axllent/mailpit:v1.31.6
+    environment:
+      MP_ENABLE_CHAOS: "true"
+      MP_MAX_MESSAGES: "0"
+    ports: ["8025:8025", "1025:1025"]
+
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    profiles: ["observability"]
+    volumes: ["./deploy/prometheus.yml:/etc/prometheus/prometheus.yml:ro"]
+    ports: ["9091:9090"]

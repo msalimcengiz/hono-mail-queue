@@ -1,0 +1,48 @@
+# Example requests for the VS Code "REST Client" extension or JetBrains HTTP Client.
+# Start the stack first: make up. Sent mail appears in Mailpit: http://localhost:8025
+@base = http://localhost:3000
+
+### Transactional email with an idempotency key (202; repeat it → 200 with the same id)
+POST {{base}}/v1/emails
+Content-Type: application/json
+Idempotency-Key: reset-ayse-1
+
+{"template": "password_reset", "to": "ayse@example.com", "vars": {"name": "Ayşe", "reset_url": "https://example.com/reset/abc"}}
+
+### Status of one email (use the id from above)
+GET {{base}}/v1/emails/REPLACE-WITH-ID
+
+### Bulk campaign: one request, up to 1,000 recipients
+POST {{base}}/v1/emails/bulk
+Content-Type: application/json
+
+{
+  "template": "campaign_report",
+  "shared_vars": {"campaign": "Sonbahar", "unsubscribe_url": "https://example.com/u"},
+  "recipients": [
+    {"to": "a@example.com", "vars": {"impressions": "1200"}},
+    {"to": "b@example.com", "vars": {"impressions": "830"}}
+  ]
+}
+
+### Batch progress (use the batch_id from above)
+GET {{base}}/v1/batches/REPLACE-WITH-BATCH-ID
+
+### Validation: missing template variable → 422
+POST {{base}}/v1/emails
+Content-Type: application/json
+
+{"template": "password_reset", "to": "x@example.com", "vars": {"name": "A"}}
+
+### Make Mailpit reject every recipient with 451 (temporary) — set Probability to 0 to stop
+PUT http://localhost:8025/api/v1/chaos
+Content-Type: application/json
+
+{"Recipient": {"ErrorCode": 451, "Probability": 100}}
+
+### Replay dead-lettered emails (after a 550 made some fail)
+POST {{base}}/admin/dlq/replay?limit=100
+X-Admin-Token: dev-admin-token
+
+### Metrics
+GET {{base}}/metrics

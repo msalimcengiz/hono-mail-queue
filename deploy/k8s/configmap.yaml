@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mail
+data:
+  SMTP_HOST: smtp.example.com
+  SMTP_PORT: "587"
+  SMTP_POOL_SIZE: "5"
+  PREFETCH_TRANSACTIONAL: "20"
+  PREFETCH_BULK: "20"
+  RATE_TRANSACTIONAL: "200"
+  RATE_BULK: "100"
+# DATABASE_URL and AMQP_URL come from the "mail-secrets" Secret.

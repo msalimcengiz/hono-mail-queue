@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mail-worker
+  labels: { app: mail, role: worker }
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: mail, role: worker }
+  template:
+    metadata:
+      labels: { app: mail, role: worker }
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9100"
+    spec:
+      # Lets in-flight sends finish after the consumers are cancelled.
+      terminationGracePeriodSeconds: 60
+      securityContext: { runAsNonRoot: true, runAsUser: 1000, seccompProfile: { type: RuntimeDefault } }
+      containers:
+        - name: worker
+          image: ghcr.io/msalimcengiz/hono-mail-queue
+          command: ["node", "dist/worker.js"]
+          ports: [{ name: metrics, containerPort: 9100 }]
+          env:
+            - name: PORT
+              value: "9100"
+          envFrom:
+            - configMapRef: { name: mail }
+            - secretRef: { name: mail-secrets }
+          resources:
+            requests: { cpu: 200m, memory: 128Mi }
+            limits: { memory: 384Mi }
+          livenessProbe:
+            httpGet: { path: /healthz, port: metrics }
+            periodSeconds: 10
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: { drop: ["ALL"] }
