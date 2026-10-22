@@ -1,6 +1,10 @@
 # hono-mail-queue
 
+[![ci](https://github.com/msalimcengiz/hono-mail-queue/actions/workflows/ci.yml/badge.svg)](https://github.com/msalimcengiz/hono-mail-queue/actions/workflows/ci.yml)
+
 An email delivery service built with TypeScript, **Hono**, **RabbitMQ** and **PostgreSQL**. Transactional and bulk mail run in separate priority classes, so a 20,000-recipient campaign does not delay a password-reset email. Failed sends are retried after increasing delays and then dead-lettered. A transactional outbox makes sure an email the API accepted reaches the queue even if the broker was down at that moment.
+
+![`make demo` on a fresh machine: every step is checked and prints ✓ or stops with ✗](docs/demo.svg)
 
 ## Try it in 2 minutes
 

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="944" viewBox="0 0 960 944" role="img" aria-label="hono-mail-queue · make demo">
+<title>hono-mail-queue · make demo</title>
+<style>text{font:13px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#d6deeb;white-space:pre}.b{font-weight:700;fill:#ffffff}.d{fill:#8b949e}.g{fill:#3fb950}.r{fill:#f85149}.p{fill:#79c0ff}.l{opacity:0;animation-duration:20.33s;animation-iteration-count:infinite;animation-timing-function:step-end}@keyframes k0{0%{opacity:0}1.968%{opacity:1}99.5%{opacity:0}}@keyframes k1{0%{opacity:0}1.968%{opacity:1}99.5%{opacity:0}}@keyframes k2{0%{opacity:0}6.886%{opacity:1}99.5%{opacity:0}}@keyframes k3{0%{opacity:0}7.477%{opacity:1}99.5%{opacity:0}}@keyframes k4{0%{opacity:0}8.067%{opacity:1}99.5%{opacity:0}}@keyframes k5{0%{opacity:0}8.657%{opacity:1}99.5%{opacity:0}}@keyframes k6{0%{opacity:0}11.166%{opacity:1}99.5%{opacity:0}}@keyframes k7{0%{opacity:0}11.756%{opacity:1}99.5%{opacity:0}}@keyframes k8{0%{opacity:0}12.346%{opacity:1}99.5%{opacity:0}}@keyframes k9{0%{opacity:0}12.937%{opacity:1}99.5%{opacity:0}}@keyframes k10{0%{opacity:0}13.527%{opacity:1}99.5%{opacity:0}}@keyframes k11{0%{opacity:0}18.396%{opacity:1}99.5%{opacity:0}}@keyframes k12{0%{opacity:0}18.987%{opacity:1}99.5%{opacity:0}}@keyframes k13{0%{opacity:0}19.577%{opacity:1}99.5%{opacity:0}}@keyframes k14{0%{opacity:0}20.167%{opacity:1}99.5%{opacity:0}}@keyframes k15{0%{opacity:0}20.758%{opacity:1}99.5%{opacity:0}}@keyframes k16{0%{opacity:0}21.348%{opacity:1}99.5%{opacity:0}}@keyframes k17{0%{opacity:0}21.938%{opacity:1}99.5%{opacity:0}}@keyframes k18{0%{opacity:0}22.528%{opacity:1}99.5%{opacity:0}}@keyframes k19{0%{opacity:0}27.447%{opacity:1}99.5%{opacity:0}}@keyframes k20{0%{opacity:0}29.169%{opacity:1}99.5%{opacity:0}}@keyframes k21{0%{opacity:0}29.759%{opacity:1}99.5%{opacity:0}}@keyframes k22{0%{opacity:0}30.841%{opacity:1}99.5%{opacity:0}}@keyframes k23{0%{opacity:0}31.431%{opacity:1}99.5%{opacity:0}}@keyframes k24{0%{opacity:0}32.022%{opacity:1}99.5%{opacity:0}}@keyframes k25{0%{opacity:0}33.792%{opacity:1}99.5%{opacity:0}}@keyframes k26{0%{opacity:0}34.383%{opacity:1}99.5%{opacity:0}}@keyframes k27{0%{opacity:0}36.891%{opacity:1}99.5%{opacity:0}}@keyframes k28{0%{opacity:0}41.810%{opacity:1}99.5%{opacity:0}}@keyframes k29{0%{opacity:0}42.400%{opacity:1}99.5%{opacity:0}}@keyframes k30{0%{opacity:0}42.991%{opacity:1}99.5%{opacity:0}}@keyframes k31{0%{opacity:0}45.499%{opacity:1}99.5%{opacity:0}}@keyframes k32{0%{opacity:0}46.090%{opacity:1}99.5%{opacity:0}}@keyframes k33{0%{opacity:0}46.680%{opacity:1}99.5%{opacity:0}}@keyframes k34{0%{opacity:0}47.270%{opacity:1}99.5%{opacity:0}}@keyframes k35{0%{opacity:0}47.860%{opacity:1}99.5%{opacity:0}}@keyframes k36{0%{opacity:0}52.779%{opacity:1}99.5%{opacity:0}}@keyframes k37{0%{opacity:0}53.369%{opacity:1}99.5%{opacity:0}}@keyframes k38{0%{opacity:0}58.288%{opacity:1}99.5%{opacity:0}}@keyframes k39{0%{opacity:0}58.879%{opacity:1}99.5%{opacity:0}}@keyframes k40{0%{opacity:0}59.469%{opacity:1}99.5%{opacity:0}}@keyframes k41{0%{opacity:0}60.059%{opacity:1}99.5%{opacity:0}}@keyframes k42{0%{opacity:0}64.978%{opacity:1}99.5%{opacity:0}}@keyframes k43{0%{opacity:0}65.568%{opacity:1}99.5%{opacity:0}}@keyframes k44{0%{opacity:0}70.487%{opacity:1}99.5%{opacity:0}}@keyframes k45{0%{opacity:0}71.077%{opacity:1}99.5%{opacity:0}}@keyframes k46{0%{opacity:0}71.667%{opacity:1}99.5%{opacity:0}}@keyframes k47{0%{opacity:0}72.258%{opacity:1}99.5%{opacity:0}}@keyframes k48{0%{opacity:0}72.946%{opacity:1}99.5%{opacity:0}}</style>
+<rect width="960" height="944" rx="8" fill="#0d1117"/>
+<rect width="960" height="30" rx="8" fill="#161b22"/><rect y="22" width="960" height="8" fill="#161b22"/>
+<circle cx="18" cy="15" r="6" fill="#ff5f57"/><circle cx="38" cy="15" r="6" fill="#febc2e"/><circle cx="58" cy="15" r="6" fill="#28c840"/>
+<text x="480.0" y="20" text-anchor="middle" style="fill:#8b949e;font-size:12px">hono-mail-queue · make demo</text>
+<text class="l" style="animation-name:k0" x="16" y="60"><tspan class="p">$</tspan> make demo</text>
+<text class="l" style="animation-name:k1" x="16" y="78">Starting the stack (API, 2 workers, Postgres, RabbitMQ, Mailpit)…</text>
+<text class="l" style="animation-name:k2" x="16" y="96"></text>
+<text class="l" style="animation-name:k3" x="16" y="114"><tspan class="b">1. A password-reset email is accepted, queued on RabbitMQ and sent over SMTP</tspan></text>
+<text class="l" style="animation-name:k4" x="16" y="132">   <tspan class="d">→ 202 {&quot;id&quot;: &quot;8109c015-1f04-4654-a144-117082839714&quot;, &quot;status&quot;: &quot;queued&quot;}</tspan></text>
+<text class="l" style="animation-name:k5" x="16" y="150">   <tspan class="g">✓</tspan> 202 Accepted with the email id</text>
+<text class="l" style="animation-name:k6" x="16" y="168">   <tspan class="g">✓</tspan> delivered after 1 attempt; see it in Mailpit: http://localhost:8025</text>
+<text class="l" style="animation-name:k7" x="16" y="186"></text>
+<text class="l" style="animation-name:k8" x="16" y="204"><tspan class="b">2. The same Idempotency-Key returns the original email instead of sending a second one</tspan></text>
+<text class="l" style="animation-name:k9" x="16" y="222">   <tspan class="d">→ 200 {&quot;id&quot;: &quot;8109c015-1f04-4654-a144-117082839714&quot;, &quot;status&quot;: &quot;sent&quot;, &quot;duplicate&quot;: true}</tspan></text>
+<text class="l" style="animation-name:k10" x="16" y="240">   <tspan class="g">✓</tspan> 200, same id, duplicate: true</text>
+<text class="l" style="animation-name:k11" x="16" y="258">   <tspan class="g">✓</tspan> still exactly one email in the inbox</text>
+<text class="l" style="animation-name:k12" x="16" y="276"></text>
+<text class="l" style="animation-name:k13" x="16" y="294"><tspan class="b">3. Template variables are checked before anything is stored</tspan></text>
+<text class="l" style="animation-name:k14" x="16" y="312">   <tspan class="d">→ 422 {&quot;error&quot;: &quot;missing template vars&quot;, &quot;missing&quot;: [&quot;reset_url&quot;]}</tspan></text>
+<text class="l" style="animation-name:k15" x="16" y="330">   <tspan class="g">✓</tspan> 422 naming the missing variable</text>
+<text class="l" style="animation-name:k16" x="16" y="348"></text>
+<text class="l" style="animation-name:k17" x="16" y="366"><tspan class="b">4. A 300-recipient campaign is stored with one INSERT and sent through the bulk queue</tspan></text>
+<text class="l" style="animation-name:k18" x="16" y="384">   <tspan class="d">→ 202 {&quot;batch_id&quot;: &quot;e8b95340-9383-405e-8fe1-75d7411f8608&quot;, &quot;count&quot;: 300}</tspan></text>
+<text class="l" style="animation-name:k19" x="16" y="402">   <tspan class="g">✓</tspan> batch e8b95340…: {&#x27;batch_id&#x27;: &#x27;e8b95340-9383-405e-8fe1-75d7411f8608&#x27;, &#x27;sent&#x27;: 300}</text>
+<text class="l" style="animation-name:k20" x="16" y="420"></text>
+<text class="l" style="animation-name:k21" x="16" y="438"><tspan class="b">5. Priority: a password reset is not stuck behind a 3,000-email campaign</tspan></text>
+<text class="l" style="animation-name:k22" x="16" y="456">   <tspan class="d">campaign progress at that moment: 216 of 3000 sent (bulk is rate-limited to 100/s per worker)</tspan></text>
+<text class="l" style="animation-name:k23" x="16" y="474">   <tspan class="g">✓</tspan> password reset delivered in 55 ms, ahead of 2784 queued campaign emails</text>
+<text class="l" style="animation-name:k24" x="16" y="492">   <tspan class="d">The campaign keeps draining in the background.</tspan></text>
+<text class="l" style="animation-name:k25" x="16" y="510"></text>
+<text class="l" style="animation-name:k26" x="16" y="528"><tspan class="b">6. A temporary SMTP error (451) is retried after 5 s, without blocking a worker</tspan></text>
+<text class="l" style="animation-name:k27" x="16" y="546">   <tspan class="d">status is &#x27;retrying&#x27;; the message waits in a TTL queue (mail.retry.transactional.5s)</tspan></text>
+<text class="l" style="animation-name:k28" x="16" y="564">   <tspan class="g">✓</tspan> sent on the 2nd attempt, exactly one copy delivered</text>
+<text class="l" style="animation-name:k29" x="16" y="582"></text>
+<text class="l" style="animation-name:k30" x="16" y="600"><tspan class="b">7. A permanent error (550) is not retried: the email is dead-lettered</tspan></text>
+<text class="l" style="animation-name:k31" x="16" y="618">   <tspan class="d">→ 200 {&quot;id&quot;: &quot;b26bb1ba-f2aa-40ff-ba18-fb48c147168c&quot;, &quot;class&quot;: &quot;transactional&quot;, &quot;template&quot;: &quot;password_reset&quot;, &quot;to&quot;:…</tspan></text>
+<text class="l" style="animation-name:k32" x="16" y="636">   <tspan class="g">✓</tspan> failed after 1 attempt and moved to the mail.dead queue</text>
+<text class="l" style="animation-name:k33" x="16" y="654"></text>
+<text class="l" style="animation-name:k34" x="16" y="672"><tspan class="b">8. After the cause is fixed, an operator replays the dead letters</tspan></text>
+<text class="l" style="animation-name:k35" x="16" y="690">   <tspan class="g">✓</tspan> the replay endpoint needs the admin token</text>
+<text class="l" style="animation-name:k36" x="16" y="708">   <tspan class="d">→ 200 {&quot;replayed&quot;: 100, &quot;kept&quot;: 0}</tspan></text>
+<text class="l" style="animation-name:k37" x="16" y="726">   <tspan class="g">✓</tspan> the replayed email was delivered</text>
+<text class="l" style="animation-name:k38" x="16" y="744"></text>
+<text class="l" style="animation-name:k39" x="16" y="762"><tspan class="b">9. RabbitMQ is down. The API still accepts the email: it is stored first (transactional outbox)</tspan></text>
+<text class="l" style="animation-name:k40" x="16" y="780">   <tspan class="d">→ 202 {&quot;id&quot;: &quot;ff039819-71c4-4145-9ae2-bb38538b6d80&quot;, &quot;status&quot;: &quot;queued&quot;}</tspan></text>
+<text class="l" style="animation-name:k41" x="16" y="798">   <tspan class="g">✓</tspan> 202 Accepted although nothing could be published</text>
+<text class="l" style="animation-name:k42" x="16" y="816"></text>
+<text class="l" style="animation-name:k43" x="16" y="834"><tspan class="b">10. RabbitMQ is back. The outbox sweeper publishes the stored email and it is sent</tspan></text>
+<text class="l" style="animation-name:k44" x="16" y="852">   <tspan class="g">✓</tspan> delivered without the client retrying anything</text>
+<text class="l" style="animation-name:k45" x="16" y="870"></text>
+<text class="l" style="animation-name:k46" x="16" y="888"><tspan class="b g">Demo finished: delivery, idempotency, validation, bulk, priority isolation, retries, dead letters with replay, and th…</tspan></text>
+<text class="l" style="animation-name:k47" x="16" y="906"></text>
+<text class="l" style="animation-name:k48" x="16" y="924">Explore: Mailpit http://localhost:8025 · RabbitMQ http://localhost:15672 (mail/mail) · stop → make down</text>
+</svg>
